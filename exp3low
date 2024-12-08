@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,odd=1,sum=0;
+    scanf("%d",&n);
+    printf("The first %d odd natural numbers are:");
+    for(i=1;i<=n;i++)
+    {
+        printf("%d",odd);
+        sum+=odd;
+        odd+=2;
+    }
+    printf("Sum of odd numbers upto %d terms:%d",n,sum);
+    return 0;
+}
+
