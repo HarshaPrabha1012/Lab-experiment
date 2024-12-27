@@ -1,0 +1,30 @@
+#include<stdio.h>
+int findlargest(int arr[],int size)
+{
+    int largest=arr[0];
+    for(int i=1;i<size;i++)
+    {
+        if(arr[i]>largest)
+        {
+            largest=arr[i];
+        }
+    }
+    return largest;
+}
+int main()
+{
+    int size;
+    printf("Enter a size:");
+    scanf("%d",&size);
+    int arr[size];
+    for(int i=1;i<size;i++)
+    {
+        printf("Element%d",i);
+        scanf("%d",&arr[i]);
+    }
+    int largest=findlargest(arr,size);
+    printf("The largest element is:%d\n",largest);
+return 0;
+}
+
+    
