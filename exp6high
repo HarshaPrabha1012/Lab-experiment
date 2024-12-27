@@ -1,0 +1,55 @@
+#include<stdio.h>
+void input matrix(int matrix[10][10],int row,int cols)
+{
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;j<cols;j++)
+        {
+            printf("Element[%d][%d]:",i,j);
+            scanf("%d",&matrix[i][j]);
+        }
+    }
+}
+void display matrix(int matrix[10][10],int rows,int cols)
+{
+    printf("Matrix:\n");
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;j<cols;j++)
+        {
+            printf("%d",matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+void add matrices(int matrix1[10][10],int matrix2[10][10],int result[10][10],int rows,int cols)
+{
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;i<cols;j++)
+        {
+            result[i][j]=matrix1[i][j]+matrix[i][j];
+        }
+    }
+}
+int main()
+{
+    int rows,cols;
+    printf("Enter row and column");
+    scanf("%d%d",&rows,&cols);
+    int matrix1[10][10],matrix2[10][10],result[10][10];
+    printf("Matrix1:\n");
+    inputmatrix(matrix1,rows,cols);
+    printf("Matrix2:\n");
+    inputmatrix(matrix2,rows,cols);
+    displaymatrix(matrix1,rows,cols);
+    displaymatrix(matrix2,rows,cols);
+    add matrix(matrix1,matrix2,result,rows,cols);
+    printf("Display the add matrix\n");
+    display matrix(result,rows,cols);
+    
+    return 0;
+    
+}
+
+
